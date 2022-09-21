@@ -11,6 +11,7 @@ $blue-400: #001F3B;
 $blue-500: #1CA5FC;
 $blue-600: #9ED8FD;
 $blue-700: #DEF0FF;
+$blue-800: #2865A3;
 $bg-color: (
 white: $white,
 black: $black,
@@ -21,6 +22,8 @@ black: $black,
 )!default;
 $grid-breakpoints: (
   xs: 0,
+  xs-360: 360px,
+  xs-420: 420px,
   sm: 576px,
   md: 768px,
   lg: 992px,
@@ -34,11 +37,11 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1160px
+  xxl: 1214px
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 $grid-columns: 12 !default;
-$grid-gutter-width: 46px !default;
+$grid-gutter-width: 54px !default;
 /* margin variables start */
 $margin: () !default;
 $margin: map-merge((), $margin);

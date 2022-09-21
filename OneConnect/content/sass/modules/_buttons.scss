@@ -1,0 +1,18 @@
+.btn{
+  @include font-size(8px);
+  @include media-breakpoint-up(md){
+    @include font-size(16px);
+  }
+  @include radius(31px);
+  text-transform: uppercase;
+  padding: 6px 20px 6px 20px;
+  border: none;
+  &-primary{
+    color: $white;
+    background-color: $blue-100;
+    &:not(:disabled):not(.disabled):active,&:hover{
+      background-color: $blue-800;
+      @include box-shadow(0);
+    }
+  }
+}
