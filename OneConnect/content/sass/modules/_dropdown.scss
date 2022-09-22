@@ -1,0 +1,96 @@
+.dropdown {
+  .nav-link {
+    text-align: left;
+    @include font-size(18px);
+    @include media-breakpoint-up(lg) {
+      text-align: center;
+      @include font-size(14px);
+    }
+    padding: 18px 35px;
+    @include media-breakpoint-up(lg) {
+      padding: 0px 25px;
+    }
+    &[aria-expanded="true"] {
+      @include radius(30px);
+      border: 1px solid $white;
+      @include media-breakpoint-up(lg) {
+        @include radius(0);
+        border: none;
+      }
+    }
+    margin: 0 16px;
+    @include media-breakpoint-up(lg) {
+      margin: auto;
+    }
+    &::after {
+      float: right;
+      display: inline-block;
+      width: 12px;
+      height: 6px;
+      border: none;
+      background: url(../images/style-images/icon-arrow-down-white.png) center/cover no-repeat;
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+    &[aria-expanded="true"] {
+      background: transparent
+        linear-gradient(270deg, $black-200 0%, $black-200 18%, $gray-100 50%, $black-200 81%, $black-200 100%) 0% 0%
+        no-repeat padding-box;
+      opacity: 1;
+      backdrop-filter: blur(30px);
+      border: 1px solid $blue-1000;
+      @include media-breakpoint-up(lg) {
+        background: transparent;
+        backdrop-filter: blur(30px);
+        border: none;
+      }
+      @include media-breakpoint-up(lg) {
+        background-color: transparent;
+      }
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .dropdown-menu {
+    @include radius(0);
+    background-color: transparent;
+    @include media-breakpoint-up(lg) {
+      background-color: $blue-100;
+    }
+    border: 0;
+    .dropdown-item {
+      padding: 4px 0;
+      margin: auto;
+      color: $white;
+      width: auto;
+      white-space: normal;
+      border-bottom: 1px solid $white;
+      @include media-breakpoint-up(lg) {
+        width: auto;
+        border-bottom: none;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+  &.dropdown-secondary {
+    .nav-link {
+      border-radius: 0;
+      border: 0;
+    }
+    .dropdown-menu {
+      background-color: $blue-600;
+      margin: 0;
+      padding: 25px 0;
+      .dropdown-item {
+        color: $blue-800;
+        padding: 18px 35px;
+        border-bottom: 0;
+        margin: 0 16px;
+      }
+    }
+  }
+}

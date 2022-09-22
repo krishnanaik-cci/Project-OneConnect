@@ -1,7 +1,10 @@
 $font-size-base: 1rem !default;
 $font-family-roboto: 'Roboto', sans-serif;
 $white: #fff;
-$black: #000;
+$black-100: #000;
+$black-200: #FFFFFF00;
+$black-300: #00000029;
+$gray-100: #FFFFFF81;
 $pink-100: #F11162;
 $purple-100: #66206D;
 $blue-100: #0065A3;
@@ -12,13 +15,15 @@ $blue-500: #1CA5FC;
 $blue-600: #9ED8FD;
 $blue-700: #DEF0FF;
 $blue-800: #2865A3;
+$blue-900: #0065A3AC;
+$blue-1000: #9ED8FD62;
 $bg-color: (
 white: $white,
-black: $black,
+black: $black-100,
 )!default;
 $text-color: (
 white: $white,
-black: $black,
+black: $black-100,
 )!default;
 $grid-breakpoints: (
   xs: 0,
