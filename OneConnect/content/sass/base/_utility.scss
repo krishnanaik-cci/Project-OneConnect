@@ -1,0 +1,12 @@
+.pipe-d-none {
+  &::after {
+    display: none;
+  }
+}
+.pipe-d-lg-block {
+  &::after {
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+}

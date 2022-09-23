@@ -1,18 +1,33 @@
-.btn{
+.btn {
   @include font-size(8px);
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-up(md) {
     @include font-size(16px);
   }
   @include radius(31px);
   text-transform: uppercase;
   padding: 6px 20px 6px 20px;
   border: none;
-  &-primary{
+  &-primary {
     color: $white;
     background-color: $blue-100;
-    &:not(:disabled):not(.disabled):active,&:hover{
-      background-color: $blue-800;
-      @include box-shadow(0);
+    &:hover {
+      background-color: $blue-1100;
     }
+    &:focus {
+      @include box-shadow(none);
+      background-color: $blue-1100;
+    }
+    &:not(:disabled):not(.disabled) {
+      &:active {
+        background-color: $blue-1100;
+        &:focus {
+          @include box-shadow(none);
+        }
+      }
+    }
+  }
+  &-secondary{
+    color: $blue-100;
+    background-color: $white;
   }
 }
