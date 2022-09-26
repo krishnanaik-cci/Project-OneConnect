@@ -6,6 +6,9 @@ body {
   }
 
   main {
-    padding-top: 100px;
+    padding-top: 192px;
+    @include media-breakpoint-up(md) {
+      padding-top: 100px;
+    }
   }
 }

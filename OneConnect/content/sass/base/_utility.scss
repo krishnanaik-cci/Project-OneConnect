@@ -10,3 +10,15 @@
     }
   }
 }
+
+.d-xs-360-block {
+  @include media-breakpoint-up(xs-360) {
+    display: block;
+  }
+}
+
+.d-xs-420-block {
+  @include media-breakpoint-up(xs-420) {
+    display: block;
+  }
+}

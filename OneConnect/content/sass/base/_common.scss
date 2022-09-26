@@ -1,0 +1,11 @@
+section {
+  h2 {
+    letter-spacing: 4px;
+    @include font-size(30px);
+    @include line-height(36px);
+    @include media-breakpoint-up(sm) {
+      @include font-size(40px);
+      @include line-height(46px);
+    }
+  }
+}

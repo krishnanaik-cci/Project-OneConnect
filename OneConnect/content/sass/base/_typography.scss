@@ -2,16 +2,22 @@
 h1,
 h2{
     font-weight: 500;
+    text-transform: uppercase;
 }
 
 h1 {
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 3.2px;
     @include font-size(32px);
     @include line-height(36px);
     @include media-breakpoint-up(md) {
+        letter-spacing: 5.6px;
         @include font-size(56px);
         @include line-height(56px);
     }
     @include media-breakpoint-up(lg) {
+        letter-spacing: 6.4px;
         @include font-size(64px);
         @include line-height(72px);
     }
@@ -23,9 +29,11 @@ h2{
 }
 
 h3{
+    letter-spacing: 1.2px;
     @include font-size(24px);
     @include line-height(32px);
     @include media-breakpoint-up(md) {
+        letter-spacing: 1.6px;
         @include font-size(32px);
         @include line-height(48px);
     } 
