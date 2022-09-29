@@ -79,11 +79,12 @@
     -moz-background: $value;
     -webkit-background: $value;
 }
-@mixin appearance($value){
+@mixin appearance($value) {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+
 @include media-breakpoint-up(sm) {
     $infix: breakpoint-infix(sm);
     @each $prop, $abbrev in (margin: m) {

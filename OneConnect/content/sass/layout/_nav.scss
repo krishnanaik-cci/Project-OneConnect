@@ -154,7 +154,6 @@ header {
         text-transform: none;
         &::after {
           display: none;
-          
         }
       }
     }
@@ -188,7 +187,7 @@ header {
         right: -40px;
         border-left: 40px solid $white;
         border-bottom: 60px solid transparent;
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(md) {
           border-bottom: 57px solid transparent;
         }
       }
@@ -232,7 +231,7 @@ header {
       }
       .navbar-nav {
         max-height: 400px;
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(md) {
           width: 450px;
         }
         overflow: scroll;
@@ -251,12 +250,12 @@ header {
           .nav-link {
             color: $white;
             text-align: left;
-            @include media-breakpoint-up(lg){
+            @include media-breakpoint-up(lg) {
               text-align: center;
             }
             white-space: normal;
             padding: 20px 10px;
-            @include media-breakpoint-up(xs-360){
+            @include media-breakpoint-up(xs-360) {
               padding: 20px 30px;
             }
             @include media-breakpoint-up(lg) {
