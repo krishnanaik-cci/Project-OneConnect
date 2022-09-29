@@ -31,11 +31,13 @@ $grid-breakpoints: (
   xs: 0,
   xs-360: 360px,
   xs-420: 420px,
+  xs-540: 540px,
   sm: 576px,
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1440px
+  xxl: 1440px,
+  xxxl: 1640px
 ) !default;
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);

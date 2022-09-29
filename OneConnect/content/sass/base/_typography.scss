@@ -1,6 +1,6 @@
 // typography
 h1,
-h2{
+h2 {
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -23,12 +23,14 @@ h1 {
     }
 }
 
-h2{
+h2 {
+    letter-spacing: 4px;
     @include font-size(40px);
     @include line-height(48px);
 }
 
-h3{
+h3 {
+    font-weight: lighter;
     letter-spacing: 1.2px;
     @include font-size(24px);
     @include line-height(32px);
@@ -36,15 +38,25 @@ h3{
         letter-spacing: 1.6px;
         @include font-size(32px);
         @include line-height(48px);
-    } 
+    }
 }
 
-h4{
+h4 {
+    color: $blue-100;
+    letter-spacing: 1px;
     @include font-size(18px);
-    @include line-height(34px);  
+    @include line-height(24px);
+    @include media-breakpoint-up(md) {
+        @include line-height(32px);
+    }
 }
 
-p{
+p {
     @include font-size(16px);
     @include line-height(28px);
+}
+
+small {
+    @include line-height(16px);
+    @include font-size(10px);
 }

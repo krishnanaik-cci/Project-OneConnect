@@ -12,13 +12,13 @@
 }
 
 .d-xs-360-block {
-  @include media-breakpoint-up(xs-360) {
-    display: block;
-  }
+  display: block !important;
 }
 
 .d-xs-420-block {
-  @include media-breakpoint-up(xs-420) {
-    display: block;
-  }
+  display: block !important;
+}
+
+.pt-50 {
+  padding-top: 50px;
 }
