@@ -1,0 +1,46 @@
+.accordion {
+  .btn-link {
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+    h4 {
+      letter-spacing: 2.3px;
+      @include line-height(24px);
+      @include font-size(22px);
+      color: $blue-200;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+  > .card {
+    border: none;
+    > .card-header {
+      border-bottom: none;
+      background-color: $white;
+      padding: 30px 25px 0 0;
+      button {
+        padding: 0;
+        @include box-shadow(none);
+        position: relative;
+        @include font-size(18px);
+        &::after {
+          content: "\f107";
+          font-family: "FontAwesome";
+          font-weight: 900;
+          float: right;
+          position: absolute;
+          top: -8px;
+          right: 4px;
+          color: $blue-200;
+          @include font-size(20px);
+        }
+        &[aria-expanded="true"] {
+          &::after {
+            @include transform(rotate(180deg));
+          }
+        }
+      }
+    }
+  }
+}

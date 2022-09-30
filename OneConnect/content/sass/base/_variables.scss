@@ -4,9 +4,11 @@ $white: #fff;
 $black-100: #000;
 $black-200: #ffffff00;
 $black-300: #00000029;
+$black-400: #00000064;
 $gray-100: #ffffff81;
 $gray-200: #efefef;
 $pink-100: #f11162;
+$pink-200: #EE256D;
 $purple-100: #66206d;
 $blue-100: #0065a3;
 $blue-200: #13426b;
@@ -31,13 +33,14 @@ $grid-breakpoints: (
   xs: 0,
   xs-360: 360px,
   xs-420: 420px,
+  xs-460: 460px,
   xs-540: 540px,
   sm: 576px,
   md: 768px,
   lg: 992px,
   xl: 1200px,
   xxl: 1440px,
-  xxxl: 1640px,
+  xxxl: 1530px,
 ) !default;
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
