@@ -1,0 +1,181 @@
+// global collapsible css
+.collapsible {
+  .btn {
+    position: relative;
+    &::after {
+      content: "\f107";
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      font-family: "FontAwesome";
+      @include font-size(20px);
+      @include transform(translateY(-50%));
+    }
+    &[aria-expanded="true"] {
+      &::after {
+        transform: rotate(180deg) translateY(50%);
+      }
+    }
+    &-primary {
+      color: $white;
+      text-align: left;
+      @include radius(0);
+      position: relative;
+      letter-spacing: 1px;
+      @include font-size(12px);
+      padding: 4px 30px 4px 21px;
+      background-color: $blue-500;
+      &:not(:disabled):not(.disabled):active {
+        background-color: $blue-500;
+      }
+    }
+  }
+  .collapse,
+  .collapsing {
+    z-index: 2;
+    .card {
+      border: 0;
+    }
+  }
+  // secondary collapsible
+  &-secondary {
+    .btn {
+      h4 {
+        color: $blue-200;
+        font-weight: bold;
+        letter-spacing: 2.4px;
+        @include line-height(24px);
+        @include font-size(22px);
+      }
+      &::after {
+        right: 0;
+        @include font-size(24px);
+      }
+    }
+  }
+}
+
+// contact details collapsible
+.contact-details {
+  .collapsible {
+    @include media-breakpoint-up(xs-360) {
+      width: 300px;
+    }
+    margin: auto;
+    @include media-breakpoint-up(md) {
+      margin: 0 auto 0 0;
+    }
+    .card-body {
+      @include radius(0);
+      background-color: $blue-1100;
+    }
+    .media {
+      @include align-items(center);
+      .media-body {
+        color: $white;
+        padding-left: 8px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+// safety info collapsible
+.safety-info {
+  .collapsible {
+    &-secondary {
+      .btn {
+        &::after {
+          @include media-breakpoint-up(md) {
+            top: 20%;
+            right: 4px;
+          }
+          @include media-breakpoint-up(xl) {
+            right: 28px;
+          }
+        }
+      }
+      .card {
+        &-body {
+          padding: 15px 0;
+          @include media-breakpoint-up(md) {
+            padding: 0;
+          }
+        }
+      }
+      .collapse,
+      .collapsing {
+        .card-body {
+          @include media-breakpoint-up(md) {
+            padding: 0 60px 0 0;
+          }
+          ul {
+            @include media-breakpoint-up(md) {
+              margin: 18px 0 21px;
+              padding: 0 0 0 12px;
+            }
+            li {
+              margin-bottom: 15px;
+              line-height: 22px;
+              letter-spacing: 0.7px;
+              @include media-breakpoint-up(md) {
+                letter-spacing: 1px;
+                @include line-height(24px);
+                @include font-size(18px);
+              }
+            }
+          }
+          .col-one {
+            @include media-breakpoint-up(md) {
+              padding-top: 0;
+            }
+            @include media-breakpoint-up(xl) {
+              padding-top: 10px;
+              max-width: 43%;
+              @include flex(0 0 27%);
+            }
+          }
+          .col-two {
+            @include media-breakpoint-up(md) {
+              padding-right: 15px;
+            }
+            @include media-breakpoint-up(xl) {
+              @include flex(0 0 73%);
+              max-width: 73%;
+              padding: 0 160px 5px 0;
+            }
+          }
+          h4 {
+            color: $blue-200;
+            font-weight: bold;
+            letter-spacing: 2.4px;
+            @include line-height(24px);
+            @include font-size(22px);
+            @include media-breakpoint-up(md) {
+              margin-bottom: 26px;
+            }
+          }
+          a,
+          p {
+            letter-spacing: 1px;
+            @include line-height(21px);
+            @include media-breakpoint-up(lg) {
+              @include line-height(24px);
+            }
+            @include font-size(18px);
+          }
+        }
+        display: block;
+        max-height: 100px;
+        @include media-breakpoint-up(md) {
+          max-height: 112px;
+        }
+        overflow: hidden;
+        &.show {
+          max-height: none;
+          overflow: visible;
+        }
+      }
+    }
+  }
+}

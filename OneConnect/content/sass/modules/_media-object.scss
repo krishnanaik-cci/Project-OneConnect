@@ -1,0 +1,9 @@
+.media{
+  &-body{
+    text-align: left;
+    h5{
+      @include line-height(18px);
+      @include font-size(16px);
+    }
+  }
+}

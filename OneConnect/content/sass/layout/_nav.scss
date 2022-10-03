@@ -163,7 +163,7 @@ header {
     clear: both;
     position: fixed;
     width: 100%;
-    background-image: linear-gradient(to right, $blue-900, $blue-100);
+    background-image: linear-gradient(to right, $blue-800, $blue-100);
     &-brand {
       background-color: $white;
       position: absolute;
@@ -298,7 +298,7 @@ header {
                 linear-gradient(270deg, $black-200 0%, $black-200 18%, $gray-100 50%, $black-200 81%, $black-200 100%)
                 0% 0% no-repeat padding-box;
               backdrop-filter: blur(30px);
-              border: 1px solid $blue-1000;
+              border: 1px solid $blue-900;
               @include media-breakpoint-up(lg) {
                 background: transparent;
                 backdrop-filter: blur(30px);

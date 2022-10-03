@@ -9,3 +9,18 @@
     }
   }
 }
+
+.contact-details{
+  .carousel{
+    padding-bottom: 26px;
+    @include media-breakpoint-up(md){
+      padding-bottom: 68px;
+    }
+    @include media-breakpoint-up(lg){
+      padding-bottom: 35px;
+    }
+    .carousel-item{
+      color: $pink-200;
+    }
+  }
+}

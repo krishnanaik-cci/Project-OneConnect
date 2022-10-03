@@ -55,8 +55,3 @@ p {
     @include font-size(16px);
     @include line-height(28px);
 }
-
-small {
-    @include line-height(16px);
-    @include font-size(10px);
-}

@@ -11,15 +11,15 @@
     color: $white;
     background-color: $blue-100;
     &:hover {
-      background-color: $blue-1100;
+      background-color: $blue-1000;
     }
     &:focus {
       @include box-shadow(none);
-      background-color: $blue-1100;
+      background-color: $blue-1000;
     }
     &:not(:disabled):not(.disabled) {
       &:active {
-        background-color: $blue-1100;
+        background-color: $blue-1000;
         &:focus {
           @include box-shadow(none);
         }

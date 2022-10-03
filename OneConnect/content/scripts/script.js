@@ -1,5 +1,9 @@
 $(document).ready(function(){
-  $('ul.dropdown-menu.mega-dropdown-menu').on('click', function(event){
-    event.stopPropagation();
-  });
+  $('.safety-info button').click(function(){
+    if($('#toggle-text').text() == 'Expand'){
+      $('#toggle-text').text('Collapse');
+    }else{
+      $('#toggle-text').text('Expand');
+    }
+  })
 });

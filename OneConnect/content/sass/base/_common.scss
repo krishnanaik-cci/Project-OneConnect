@@ -1,19 +1,33 @@
 ul {
-  padding: 0 0 0 15px;
-  &.list-rhombus {
+  &.list {
     list-style-type: none;
+    padding: 0 0 0 15px;
     li {
       position: relative;
-      letter-spacing: 0.8px;
-      padding: 0 0 11px 0;
       &::before {
         content: "";
         position: absolute;
-        height: 28px;
-        width: 25px;
-        left: -30px;
-        margin: 1px 0 0 8px;
-        @include background(url(../images/style-images/rhombus.png) center/cover no-repeat);
+        top: 3px;
+        left: -10px;
+        width: 4px;
+        height: 4px;
+        @include radius(50%);
+        background-color: $blue-400;
+      }
+    }
+    &.list-rhombus {
+      li {
+        letter-spacing: 0.8px;
+        padding: 0 0 11px 0;
+        &::before {
+          content: "";
+          position: absolute;
+          height: 28px;
+          width: 25px;
+          left: -30px;
+          margin: 1px 0 0 8px;
+          @include background(url(../images/style-images/rhombus.png) center/cover no-repeat);
+        }
       }
     }
   }
@@ -31,14 +45,41 @@ ul {
   @include background(url(../images/style-images/quote-bg-img.png) center/cover no-repeat);
   h2 {
     text-transform: none;
-    color: $blue-100;
+    color: $blue-200;
     letter-spacing: 4px;
+  }
+  &.second-quote {
+    padding: 50px 26px 35px;
+    @include media-breakpoint-up(md) {
+      padding: 75px 70px 60px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 95px 70px 84px;
+    }
+  }
+  &.third-quote {
+    padding: 80px 45px 35px;
+    @include media-breakpoint-up(md) {
+      padding: 50px 80px 34px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 72px 245px 64px;
+    }
+  }
+  &.fourth-quote {
+    padding: 50px 40px 35px;
+    @include media-breakpoint-up(md) {
+      padding: 95px 75px 35px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 95px 75px 95px;
+    }
   }
 }
 
 .blue-container {
   background-color: $blue-300;
-  padding: 86px 0;
+  padding: 84px 0;
   @include media-breakpoint-up(md) {
     padding: 68px 0 105px;
   }
@@ -117,10 +158,11 @@ hr {
 }
 
 .slider-control {
+  border: 1px solid $pink-200;
   background-color: $pink-100;
   @include box-shadow(0px 6px 18px $black-400);
   margin: 60px auto 0;
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     margin: 98px auto 0;
   }
   width: 158px;
@@ -139,14 +181,14 @@ hr {
       @include font-size(32px);
       font-weight: lighter;
       padding: 18px 10px 8px;
-      &:first-child{
+      &:first-child {
         border-right: 1px solid $white;
       }
     }
   }
 }
 
-a.disabled{
-  opacity: .5;
+a.disabled {
+  opacity: 0.5;
   pointer-events: none;
 }
