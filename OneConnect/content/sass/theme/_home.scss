@@ -78,6 +78,9 @@
       width: auto;
     }
     @include media-breakpoint-up(xl) {
+      margin: 0;
+    }
+    @include media-breakpoint-up(xxl) {
       margin: 50px 0 0 -83px;
     }
   }
