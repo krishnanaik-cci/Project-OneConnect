@@ -1,4 +1,19 @@
 .dropdown {
+  a.dropdown-toggle {
+    &::after {
+      content: "\f107";
+      border: 0;
+      display: inline-block;
+      vertical-align: middle;
+      font-weight: lighter;
+      font-family: "FontAwesome";
+    }
+    &[aria-expanded="true"] {
+      &::after {
+        @include transform(rotate(180deg));
+      }
+    }
+  }
   .dropdown-menu {
     @include radius(0);
     border: 0;
@@ -15,6 +30,7 @@
       color: $white;
       text-align: left;
       white-space: normal;
+      background-color: transparent;
       @include font-size(15px);
       @include media-breakpoint-up(xs-360) {
         @include font-size(16px);
@@ -35,6 +51,7 @@
       }
     }
   }
+  // white color dropdown css
   &.dropdown-secondary {
     .dropdown-menu {
       background-color: $white;

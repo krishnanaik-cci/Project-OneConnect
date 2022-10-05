@@ -7,7 +7,6 @@ h2 {
 
 h1 {
     color: $white;
-    text-transform: uppercase;
     letter-spacing: 3.2px;
     @include font-size(32px);
     @include line-height(36px);
@@ -24,9 +23,18 @@ h1 {
 }
 
 h2 {
-    letter-spacing: 4px;
-    @include font-size(40px);
-    @include line-height(48px);
+    @include font-size(30px);
+    @include line-height(36px);
+    @include media-breakpoint-up(xs-420) {
+        letter-spacing: 4px;
+        @include font-size(40px);
+        @include line-height(46px);
+    }
+    @include media-breakpoint-up(md) {
+        letter-spacing: 6.4px;
+        @include font-size(64px);
+        @include line-height(72px);
+    }
 }
 
 h3 {
@@ -52,6 +60,8 @@ h4 {
 }
 
 p {
+    font-weight: lighter;
+    letter-spacing: 0.8px;
     @include font-size(16px);
     @include line-height(28px);
 }

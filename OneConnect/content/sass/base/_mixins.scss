@@ -9,6 +9,11 @@
     -moz-transform: $value;
     -webkit-transform: $value;
 }
+
+@mixin clip-path($value){
+    clip-path: $value;
+}
+
 @mixin box-shadow($value) {
     box-shadow: $value;
     -moz-box-shadow: $value;

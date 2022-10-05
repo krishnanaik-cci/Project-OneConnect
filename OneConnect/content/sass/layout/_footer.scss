@@ -1,16 +1,16 @@
 footer {
   color: $white;
-  margin-top: 5px;
+  margin-top: 4px;
+  background-color: $blue-400;
+  padding: 12px 8px 21px 0;
   @include media-breakpoint-up(md) {
     margin-top: 10px;
-    padding-top: 24px;
+    padding: 24px 0 21px 0;
   }
-  @include media-breakpoint-up(xl){
-    margin-top: 45px;
+  @include media-breakpoint-up(xl) {
+    margin-top: 40px;
     padding-top: 16px;
   }
-  padding: 12px 0 21px;
-  background-color: $blue-400;
   a {
     color: $white;
     text-decoration: none;
@@ -22,16 +22,16 @@ footer {
   p,
   a {
     margin-bottom: 8px;
-    letter-spacing: -0.38px;
+    letter-spacing: -0.35px;
     @include media-breakpoint-up(md) {
-      letter-spacing: 0.7px;
+      letter-spacing: 0.8px;
     }
     @include font-size(14px);
     @include line-height(18px);
   }
   ul.list-unstyled {
     > li {
-      &.border-right{
+      &.border-right {
         border-right: 1px solid $white !important;
       }
       &:first-child {
@@ -40,7 +40,7 @@ footer {
           padding-right: 23px;
           margin-right: 20px;
         }
-        @include media-breakpoint-up(xl){
+        @include media-breakpoint-up(xl) {
           margin-right: 0;
         }
         img {
@@ -52,7 +52,7 @@ footer {
       }
       &:nth-child(2) {
         @include media-breakpoint-up(lg) {
-        padding-left: 12px;
+          padding-left: 12px;
         }
         img {
           max-width: 59px;
@@ -65,20 +65,23 @@ footer {
   }
   .col-two {
     padding-right: 24px;
-    @include media-breakpoint-up(xl){
+    @include media-breakpoint-up(xl) {
       padding: 0 28px 0 40px;
     }
   }
   div {
     a {
-      margin-left: 15px;
-      @include media-breakpoint-up(xs-420){
-      margin-left: 65px;
+      margin-left: 11px;
+      @include media-breakpoint-up(xs-360) {
+        margin-left: 25px;
       }
-      @include media-breakpoint-up(md){
+      @include media-breakpoint-up(xs-420) {
+        margin-left: 65px;
+      }
+      @include media-breakpoint-up(md) {
         margin-left: 24px;
-        }
-      @include media-breakpoint-up(lg){
+      }
+      @include media-breakpoint-up(lg) {
         margin-left: 32px;
       }
       &:first-child {
