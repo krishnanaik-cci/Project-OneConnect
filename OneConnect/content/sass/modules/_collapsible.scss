@@ -109,7 +109,7 @@
         }
         @include media-breakpoint-up(md) {
           @include font-size(22px);
-          margin-bottom: 26px;
+          margin-bottom: 24px;
         }
       }
       .card {
@@ -119,6 +119,9 @@
             padding: 0;
           }
         }
+      }
+      .collapsing{
+        height: 100px;
       }
       .collapse,
       .collapsing {
