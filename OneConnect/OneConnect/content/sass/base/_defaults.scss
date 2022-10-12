@@ -1,0 +1,8 @@
+body {
+  color: $blue-400;
+  font-family: $font-family-roboto;
+  .container {
+    @include make-container();
+    @include make-container-max-widths($container-max-widths, $grid-breakpoints);
+  }
+}

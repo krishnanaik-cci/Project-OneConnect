@@ -1,0 +1,54 @@
+.btn {
+  @include font-size(8px);
+  @include media-breakpoint-up(md) {
+    @include font-size(16px);
+  }
+  @include radius(31px);
+  text-transform: uppercase;
+  padding: 6px 20px 6px 20px;
+  border: none;
+  &-primary {
+    color: $white;
+    background-color: $blue-100;
+    &:hover {
+      background-color: $blue-1000;
+    }
+    &:focus {
+      @include box-shadow(none);
+      background-color: $blue-1000;
+    }
+    &:not(:disabled):not(.disabled) {
+      &:active {
+        background-color: $blue-1000;
+        &:focus {
+          @include box-shadow(none);
+        }
+      }
+    }
+  }
+  &-secondary {
+    letter-spacing: 1.6px;
+    @include font-size(16px);
+    color: $blue-100;
+    padding: 20px 42px;
+    background-color: $white;
+    &:hover {
+      color: $blue-100;
+      background-color: $white;
+    }
+    &:focus {
+      @include box-shadow(none);
+      color: $blue-100;
+      background-color: $white;
+    }
+    &:not(:disabled):not(.disabled) {
+      &:active {
+        color: $blue-100;
+        background-color: $white;
+        &:focus {
+          @include box-shadow(none);
+        }
+      }
+    }
+  }
+}

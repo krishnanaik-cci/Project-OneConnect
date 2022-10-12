@@ -1,0 +1,62 @@
+.text-blue-100 {
+  color: $blue-100 !important;
+}
+
+.text-blue-400 {
+  color: $blue-400 !important;
+}
+
+.bg-blue-400 {
+  background-color: $blue-400;
+}
+
+.pl-xl-15 {
+  @include media-breakpoint-up(xxl) {
+    padding-left: 15px !important;
+  }
+}
+
+.fs-12 {
+  font-size: 0.75rem !important;
+}
+
+.box-show {
+  @include box-shadow(0px 6px 18px $black-400 !important);
+}
+
+.border-right-xl-primary {
+  @include media-breakpoint-up(xl) {
+    border-right: 1px solid $blue-700 !important;
+  }
+}
+
+.border-right-white {
+  border-right: 1px solid $white;
+}
+
+// bg colors utilitys
+.bg-purple {
+  background-color: $purple;
+}
+
+.bg-blue-300 {
+  background-color: $blue-300;
+}
+
+.bg-blue-1600 {
+  background-color: $blue-1600;
+}
+
+.bg-blue-1100 {
+  background-color: $blue-1100;
+}
+
+.mb-12 {
+  margin-bottom: 12px !important;
+}
+
+.d-xs-420-inline {
+  @include media-breakpoint-up(xs-420) {
+    display: inline !important;
+  }
+}
